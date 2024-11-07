@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload</title>
+  <link rel="stylesheet" href="allfile/design.css">
+
+<style>
+  body {
+  font-family: sans-serif;
+  margin: 2rem;
+  background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #FDE49E; */
+   /* Set minimum height for centering */
+
+.file-upload {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.file-upload label {
+  padding: 0.5rem 1rem;
+  border: 1px solid #373B44;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-upload label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:8px;
+  border-bottom-right-radius: 20px;
+  
+}
+button[type="submit"]{
+  padding:0px;
+  margin:0px;
+  background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  width: 170px;
+  height: 70px;
+  margin: 20px;
+  /* border: solid rgb(71, 92, 109); */
+  border-radius:5px;
+  border-bottom-right-radius: 20px;
+}
+
+button[type="submit"]:hover {
+  margin: 20px;
+  /* background:rgb(53, 53, 88); */
+  background: #373B44;
+  color: white;
+  border: none;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 70px;
+  /* border: solid rgb(27, 27, 99);   */
+}
+  
+.file-upload>#Browes{
+  margin: 20px;
+  padding: 5px;
+}
+
+/* form > button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.nav{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #cda71e; */
+  border-radius: 5px;
+}
+form{
+  color: white;
+  background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #8b8208; */
+  border: radius 5px;
+}
+.allwork{
+  border: black;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 10px;
+  
+
+}
+}
+</style>
+
+</head>
+<body>
+  <div class="nav">
+    <h1>PDF MergerMaster</h1>
+  </div>
+  <form method="post" action="/merge" enctype="multipart/form-data">
+    <div class="allwork">
+      <div class="file-upload">
+        <label id="Browes">
+          <h2>
+            <input type="file" name="pdfs" class="form-control-file" id="exampleFormControlFile1" multiple aacept=".Pdf">
+            <span id="fileCount">Pleas select respective files</span>
+          </h2>
+         
+        </label>
+        
+      </div>
+      <button type="submit" id="sbtn"><h2>Submit Files</h2></button>
+    </div>
+    
+  </form>
+</body>
+</html>
+
